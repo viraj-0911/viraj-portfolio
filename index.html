@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Viraj Balekar | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // 🔴 Replace
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "YOUR_SERVICE_ID",   // 🔴 Replace
+      "YOUR_TEMPLATE_ID",  // 🔴 Replace
+      this
+    )
+    .then(() => {
+      document.getElementById("status").innerText =
+        "Message sent successfully!";
+      this.reset();
+    }, () => {
+      document.getElementById("status").innerText =
+        "Failed to send message. Try again.";
+    });
+  });
+</script>
+
+<body>
+
+<!-- Navbar -->
+<header>
+  <div class="logo">Viraj's Portfolio</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Viraj Balekar</h1>
+    <h3>Aspiring Software & Web Developer</h3>
+    <p>MCA Student | Full Stack Developer</p>
+
+    <div class="buttons">
+      <a href="Viraj_Balekar_Resume.pdf" download class="btn primary">Download Resume</a>
+      <a href="#contact" class="btn secondary">Hire Me</a>
+    </div>
+  </div>
+
+  <div class="hero-img">
+    <img src="img.jpg.jpeg" alt="Viraj Balekar">
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h2>Career Objective</h2>
+  <p>
+    Aspiring software developer with strong programming and problem-solving skills.
+    Eager to contribute to dynamic development teams by building efficient, scalable,
+    and user-friendly applications. Passionate about continuous learning and new technologies.
+  </p>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section dark">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Python</span>
+    <span>C</span>
+    <span>C++</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React.js</span>
+    <span>Node.js</span>
+    <span>MySQL</span>
+    <span>MongoDB</span>
+  </div>
+
+  <h2>Soft Skills</h2>
+  <div class="skills">
+    <span>Communication</span>
+    <span>Teamwork</span>
+    <span>Problem Solving</span>
+    <span>Adaptability</span>
+    <span>Quick Learning</span>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects">
+
+    <div class="card">
+      <h3>B-FIT Fitness App</h3>
+      <p>
+        Fitness management web application using PHP & MySQL.
+        Features workout tracking, nutrition logs, authentication,
+        and responsive dashboards.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Guess The Number Game</h3>
+      <p>
+        Python console-based game with random number generation,
+        hints, feedback, and replay functionality.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>
+        Personal responsive portfolio built using HTML, CSS,
+        and JavaScript to showcase skills and projects.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section dark">
+  <h2>Education</h2>
+  <ul class="education">
+    <li>
+      <strong>MCA</strong> – P.R. Pote College of Engineering & Management, Amravati  
+      <br> <span>(Pursuing)</span>
+    </li>
+    <li>
+      <strong>BCA</strong> – Brijlal Biyani Science College, Amravati (2024)  
+      <br> <span>CGPA: 6.7</span>
+    </li>
+    <li>
+      <strong>12th</strong> – Brijlal Biyani Science College, Amravati (2021)  
+      <br> <span>83.17%</span>
+    </li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p class="contact-subtitle">
+    Feel free to reach out to me for internships, projects, or collaboration opportunities.
+  </p>
+
+  <div class="contact-container">
+
+    <!-- Left Side -->
+    <div class="contact-info">
+      <p><strong>Email:</strong> virajbalekar@gmail.com</p>
+      <p><strong>Phone:</strong> +91 9890860764</p>
+      <p><strong>Location:</strong> Amravati, India</p>
+
+      <div class="contact-buttons">
+        <a href="https://github.com/viraj-0911" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/viraj-balekar" target="_blank">LinkedIn</a>
+        <a href="mailto:virajbalekar@gmail.com">Email Me</a>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <form class="contact-form" id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required>
+      <input type="email" name="user_email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+
+
+<footer>
+  <p>© 2026 Viraj Balekar | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
