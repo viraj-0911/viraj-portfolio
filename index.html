@@ -6,32 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-<script>
-  (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // 🔴 Replace
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "YOUR_SERVICE_ID",   // 🔴 Replace
-      "YOUR_TEMPLATE_ID",  // 🔴 Replace
-      this
-    )
-    .then(() => {
-      document.getElementById("status").innerText =
-        "Message sent successfully!";
-      this.reset();
-    }, () => {
-      document.getElementById("status").innerText =
-        "Failed to send message. Try again.";
-    });
-  });
-</script>
-
 <body>
 
 <!-- Navbar -->
@@ -191,6 +165,31 @@
 <footer>
   <p>© 2026 Viraj Balekar | All Rights Reserved</p>
 </footer>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("iWt9ZZrKDtMH2tOGo"); // 🔴 Replace
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_hdswm6q",   // 🔴 Replace
+      "template_i3x6dvp",  // 🔴 Replace
+      this
+    )
+    .then(() => {
+      document.getElementById("status").innerText =
+        "Message sent successfully!";
+      this.reset();
+    }, () => {
+      document.getElementById("status").innerText =
+        "Failed to send message. Try again.";
+    });
+  });
+</script>
 
 </body>
 </html>
